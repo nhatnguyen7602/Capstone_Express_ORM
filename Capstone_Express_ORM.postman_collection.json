@@ -1,0 +1,525 @@
+{
+	"info": {
+		"_postman_id": "ddee00f5-34ec-41ef-be97-69eaeeaf7e18",
+		"name": "Capstone Express ORM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23747005"
+	},
+	"item": [
+		{
+			"name": "Lấy ảnh",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJtYXRfa2hhdSI6IjEyMyIsImhvX3RlbiI6Ik5ndXnhu4VuIE1pbmggTmjhuq10IiwidHVvaSI6MjAsImFuaF9kYWlfZGllbiI6IiJ9LCJpYXQiOjE2NzE2NzY3NDUsImV4cCI6MTY3MjI4MTU0NX0.R67UfHeD1CmrAObIet4iIXnAxOkaa3swmniE3l93BUs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/api/anh/getAnh",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"anh",
+						"getAnh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Đăng ký",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"truc@gmail.com\",\r\n    \"mat_khau\": \"234\",\r\n    \"ho_ten\": \"Trần Trúc\",\r\n    \"tuoi\": 23\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/auth/createNguoiDung",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"createNguoiDung"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Đăng nhập",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"truc@gmail.com\",\r\n    \"mat_khau\": \"234\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/auth/login",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy ảnh theo tên",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJtYXRfa2hhdSI6IjEyMyIsImhvX3RlbiI6Ik5ndXnhu4VuIE1pbmggTmjhuq10IiwidHVvaSI6MjAsImFuaF9kYWlfZGllbiI6IiJ9LCJpYXQiOjE2NzE2NzY3NDUsImV4cCI6MTY3MjI4MTU0NX0.R67UfHeD1CmrAObIet4iIXnAxOkaa3swmniE3l93BUs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/api/anh/getAnh/",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"anh",
+						"getAnh",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy ảnh đã lưu theo id người dùng",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJtYXRfa2hhdSI6IjEyMyIsImhvX3RlbiI6Ik5ndXnhu4VuIE1pbmggTmjhuq10IiwidHVvaSI6MjAsImFuaF9kYWlfZGllbiI6IiJ9LCJpYXQiOjE2NzE2NzY3NDUsImV4cCI6MTY3MjI4MTU0NX0.R67UfHeD1CmrAObIet4iIXnAxOkaa3swmniE3l93BUs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/api/anh/getAnhDaLuu",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"anh",
+						"getAnhDaLuu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy ảnh đã tạo theo id người dùng",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJtYXRfa2hhdSI6IjEyMyIsImhvX3RlbiI6Ik5ndXnhu4VuIE1pbmggTmjhuq10IiwidHVvaSI6MjAsImFuaF9kYWlfZGllbiI6IiJ9LCJpYXQiOjE2NzE2NzY3NDUsImV4cCI6MTY3MjI4MTU0NX0.R67UfHeD1CmrAObIet4iIXnAxOkaa3swmniE3l93BUs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/api/anh/getAnhDaTao",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"anh",
+						"getAnhDaTao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Xoá ảnh theo id ảnh",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJtYXRfa2hhdSI6IjEyMyIsImhvX3RlbiI6Ik5ndXnhu4VuIE1pbmggTmjhuq10IiwidHVvaSI6MjAsImFuaF9kYWlfZGllbiI6IiJ9LCJpYXQiOjE2NzE2NzY3NDUsImV4cCI6MTY3MjI4MTU0NX0.R67UfHeD1CmrAObIet4iIXnAxOkaa3swmniE3l93BUs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/api/anh/deleteAnh/4",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"anh",
+						"deleteAnh",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Thêm ảnh",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJtYXRfa2hhdSI6IjEyMyIsImhvX3RlbiI6Ik5ndXnhu4VuIE1pbmggTmjhuq10IiwidHVvaSI6MjAsImFuaF9kYWlfZGllbiI6IiJ9LCJpYXQiOjE2NzE2NzY3NDUsImV4cCI6MTY3MjI4MTU0NX0.R67UfHeD1CmrAObIet4iIXnAxOkaa3swmniE3l93BUs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "dataUpload",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "ten_hinh",
+							"value": "Cute",
+							"type": "text"
+						},
+						{
+							"key": "mo_ta",
+							"value": "Cuteeeeee",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{domain}}/api/anh/uploadAnh",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"anh",
+						"uploadAnh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lưu ảnh",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJtYXRfa2hhdSI6IjEyMyIsImhvX3RlbiI6Ik5ndXnhu4VuIE1pbmggTmjhuq10IiwidHVvaSI6MjAsImFuaF9kYWlfZGllbiI6IiJ9LCJpYXQiOjE2NzE2NzY3NDUsImV4cCI6MTY3MjI4MTU0NX0.R67UfHeD1CmrAObIet4iIXnAxOkaa3swmniE3l93BUs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hinh_id\": 15,\r\n    \"ngay_luu\": \"2022-12-26\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/anh/postLuuAnh",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"anh",
+						"postLuuAnh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sửa thông tin người dùng có avatar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJtYXRfa2hhdSI6IjEyMyIsImhvX3RlbiI6Ik5ndXnhu4VuIE1pbmggTmjhuq10IiwidHVvaSI6MjAsImFuaF9kYWlfZGllbiI6IiJ9LCJpYXQiOjE2NzE2NzY3NDUsImV4cCI6MTY3MjI4MTU0NX0.R67UfHeD1CmrAObIet4iIXnAxOkaa3swmniE3l93BUs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "dataAvatar",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "email",
+							"value": "nhatupdate@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "mat_khau",
+							"value": "7777",
+							"type": "text"
+						},
+						{
+							"key": "ho_ten",
+							"value": "Nguyễn Minh Nhật Update",
+							"type": "text"
+						},
+						{
+							"key": "tuoi",
+							"value": "19",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{domain}}/api/nguoiDung/updateNguoiDungCoAvatar",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"nguoiDung",
+						"updateNguoiDungCoAvatar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sửa thông tin người dùng không avatar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJtYXRfa2hhdSI6IjEyMyIsImhvX3RlbiI6Ik5ndXnhu4VuIE1pbmggTmjhuq10IiwidHVvaSI6MjAsImFuaF9kYWlfZGllbiI6IiJ9LCJpYXQiOjE2NzE2NzY3NDUsImV4cCI6MTY3MjI4MTU0NX0.R67UfHeD1CmrAObIet4iIXnAxOkaa3swmniE3l93BUs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"nhatnoavatar@gmail.com\",\r\n    \"mat_khau\": \"1111\",\r\n    \"ho_ten\": \"Nhật không avatar\",\r\n    \"tuoi\": 11\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/nguoiDung/updateNguoiDung",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"nguoiDung",
+						"updateNguoiDung"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy thông tin theo id ảnh",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJtYXRfa2hhdSI6IjEyMyIsImhvX3RlbiI6Ik5ndXnhu4VuIE1pbmggTmjhuq10IiwidHVvaSI6MjAsImFuaF9kYWlfZGllbiI6IiJ9LCJpYXQiOjE2NzE2NzY3NDUsImV4cCI6MTY3MjI4MTU0NX0.R67UfHeD1CmrAObIet4iIXnAxOkaa3swmniE3l93BUs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/api/anh/getThongTinAnh/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"anh",
+						"getThongTinAnh",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy thông tin lưu ảnh theo id ảnh",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJtYXRfa2hhdSI6IjEyMyIsImhvX3RlbiI6Ik5ndXnhu4VuIE1pbmggTmjhuq10IiwidHVvaSI6MjAsImFuaF9kYWlfZGllbiI6IiJ9LCJpYXQiOjE2NzE2NzY3NDUsImV4cCI6MTY3MjI4MTU0NX0.R67UfHeD1CmrAObIet4iIXnAxOkaa3swmniE3l93BUs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/api/anh/getLuuAnh/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"anh",
+						"getLuuAnh",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy bình luận theo id ảnh",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJtYXRfa2hhdSI6IjEyMyIsImhvX3RlbiI6Ik5ndXnhu4VuIE1pbmggTmjhuq10IiwidHVvaSI6MjAsImFuaF9kYWlfZGllbiI6IiJ9LCJpYXQiOjE2NzE2NzY3NDUsImV4cCI6MTY3MjI4MTU0NX0.R67UfHeD1CmrAObIet4iIXnAxOkaa3swmniE3l93BUs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/api/binhLuan/getBinhLuan/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"binhLuan",
+						"getBinhLuan",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy thông tin người dùng",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJtYXRfa2hhdSI6IjEyMyIsImhvX3RlbiI6Ik5ndXnhu4VuIE1pbmggTmjhuq10IiwidHVvaSI6MjAsImFuaF9kYWlfZGllbiI6IiJ9LCJpYXQiOjE2NzE2NzY3NDUsImV4cCI6MTY3MjI4MTU0NX0.R67UfHeD1CmrAObIet4iIXnAxOkaa3swmniE3l93BUs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/api/nguoiDung/getThongTinNguoiDung",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"nguoiDung",
+						"getThongTinNguoiDung"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Đăng bình luận",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJtYXRfa2hhdSI6IjEyMyIsImhvX3RlbiI6Ik5ndXnhu4VuIE1pbmggTmjhuq10IiwidHVvaSI6MjAsImFuaF9kYWlfZGllbiI6IiJ9LCJpYXQiOjE2NzE2NzY3NDUsImV4cCI6MTY3MjI4MTU0NX0.R67UfHeD1CmrAObIet4iIXnAxOkaa3swmniE3l93BUs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idAnh\": 15,\r\n    \"ngayLuu\": \"2022-12-20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/binhLuan/postBinhLuan",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"binhLuan",
+						"postBinhLuan"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
